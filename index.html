@@ -23,8 +23,8 @@
 
         <span class="me"><b>Hello! I am Raja Aravindha </b></span>
         <br>I am an aspiring Software Engineer currently Studying at VIT,Vellore
-        <div class="filler" id = "about"></div>
-        <div class="card" >
+        <div class="filler" id="about"></div>
+        <div class="card">
             <h2>About me</h2>
             Hello everyone, I am Raja Aravindha from Bangalore-India, currently pursuing Computer Science engineering at
             VIT
@@ -36,8 +36,8 @@
             about myself.
             I really want to explore and <br> improve my skill set and expand my knowledge as much as possible.
         </div>
-        <div class="filler" id ="skills"></div>
-        <div class="card" >
+        <div class="filler" id="skills"></div>
+        <div class="card">
             <h2>My Skills</h2>
             <b>Programming Languages:</b>
             <ul>
@@ -53,9 +53,9 @@
             I am currently also learning to build web applications and programs using <br>
             NodeJs and JavaScript Frameworks.
         </div>
-        <div class="filler" id = "work"></div>
+        <div class="filler" id="work"></div>
 
-        <div class="card" >
+        <div class="card">
             <h2>My Work</h2>
             • Drawing Economic Conclusions by applying
             feature selection on the Indian Stock Market - AI Model to predict Stock prices using <br>
@@ -88,7 +88,7 @@
         </div>
 
         <div class="filler" id="contact"></div>
-        <div class="card" >
+        <div class="card">
             <h2>Contact</h2>
 
             <b>Email</b> : rajaaravindha.a@gmail.com <br>
@@ -98,8 +98,25 @@
     </div>
     <script>
         let ghlink = document.getElementById("gh-link");
+        let navbar = document.querySelector('nav');
         function takemetogh() {
             ghlink.click();
+        }
+        function desktopcheck() {
+            var check = false;
+            if (window.innerWidth > 768) {
+                check = true;
+            }
+            return check;
+        }
+
+        window.onload = ()=>{
+            if(!desktopcheck()){
+                navbar.className="navbar-mobile";
+            }
+            else{
+                navbar.className="navbar" ;
+            }
         }
     </script>
 </body>
